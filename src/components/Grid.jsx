@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import fetchCountries from '@utils/fetchCountries'
+import Card from '@components/Card'
 
 export default function Grid() {
 	const [data, setData] = useState(null)
@@ -7,13 +7,21 @@ export default function Grid() {
 
 	useEffect(async () => {
 		try {
-			setData(await fetchCountries('all'))
+			const res = await fetch(
+				`https://restcountries.com/v2/region/europe?fields=name,capital,population,region,flags`
+			)
+			setData(await res.json())
 		} catch (err) {
 			setError(err)
 		}
 	}, [])
 
 	console.log(data)
+	console.log(error)
 
-	return <h1 className="text-center text-4xl text-white">Hello World!</h1>
+	return (
+		<div className="grid gap-10  sm:grid-cols-2 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mx-8 sm:mx-8 md:my-12 md:mx-14 mt-8">
+			{data && data.map((country) => <Card {...country} />)}
+		</div>
+	)
 }

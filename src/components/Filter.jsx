@@ -37,7 +37,7 @@ export default function Filter() {
 					leaveFrom="transform scale-100 opacity-100"
 					leaveTo="transform scale-95 opacity-0"
 				>
-					<Listbox.Options className="bg-slate-800  focus:outline-none px-2 py-1 w-full mt-1 absolute top-full">
+					<Listbox.Options className="bg-slate-800 z-50 focus:outline-none px-2 py-1 w-full mt-1 absolute top-full">
 						{options
 							.filter((option) => option !== selected)
 							.map((option, i) => (
