@@ -5,7 +5,7 @@ import CountryPage from '@components/CountryPage'
 
 function App() {
 	return (
-		<div className="bg-slate-900 pb-4 min-h-screen">
+		<div className="min-h-screen pb-4 bg-slate-900">
 			<Header />
 			<Controls />
 			{/* <Grid /> */}
