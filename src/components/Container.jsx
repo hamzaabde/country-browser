@@ -1,10 +1,6 @@
 export default function Container({ children }) {
 	return (
-		<div
-			className={`${
-				currentTheme == 'dark' ? value : null
-			} min-h-screen bg-dark-bg`}
-		>
+		<div className={` min-h-screen bg-light-bg flex flex-col items-stretch`}>
 			{children}
 		</div>
 	)
