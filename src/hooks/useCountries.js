@@ -13,7 +13,6 @@ export default function useAllCountries() {
 		}
 	}, [])
 
-	console.log(result)
 	return [result, error]
 }
 

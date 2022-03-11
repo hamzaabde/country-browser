@@ -6,7 +6,7 @@ import GridContainer from '@components/GridContainer'
 import useCountries from '@hooks/useCountries'
 
 function App() {
-	const { data, error } = useCountries()
+	const [data, error] = useCountries()
 
 	return (
 		<Container>
