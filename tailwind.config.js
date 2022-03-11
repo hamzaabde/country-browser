@@ -1,4 +1,9 @@
+const {
+	theme: { screens },
+} = require('tailwindcss/defaultConfig')
+
 module.exports = {
+	darkMode: 'class',
 	content: ['./src/**/*.jsx', './src/**/*.css'],
 	theme: {
 		fontWeight: {
@@ -6,17 +11,14 @@ module.exports = {
 			bold: '600',
 			extraBold: '800',
 		},
+		screens: { xs: '375px', ...screens },
 		extend: {
-			screens: {
-				xs: '375px',
-				llg: '1440px',
-			},
 			fontFamily: { sans: ['Nunito Sans', 'Segoe UI', 'sans-serif'] },
 			fontSize: {
 				'home-items': '14px',
 				'details-page': '16px',
 			},
-			color: {
+			colors: {
 				//  Dark Blue (Dark Mode Elements)
 				'dark-blue': 'hsl(209, 23%, 22%)',
 				//  Very Dark Blue (Dark Mode Background)

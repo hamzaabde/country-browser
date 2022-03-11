@@ -1,12 +1,15 @@
-import DarkModeToggle from '@components/DarkModeToggle'
+import { useEffect } from 'react'
+import ThemeToggler from '@components/ThemeToggler'
 
 export default function Header() {
 	return (
-		<div className="flex items-center justify-between py-5 px-4 sm:px-8 md:py-4 md:px-14 bg-slate-800">
-			<h1 className="text-white text-sm md:text-xl font-bold">
-				Where in the world?
-			</h1>
-			<DarkModeToggle />
+		<div className="bg-dark-text shadow-md shadow-black/10 border-black/10">
+			<div className="max-w-screen-xl  xl:mx-auto flex items-center justify-between px-4 md:px-8 sm:px-6  xs:py-8 py-4 flex-nowrap">
+				<h1 className="text-[14px] xs:text-base font-[700] text-light-text">
+					Where in the world?
+				</h1>
+				<ThemeToggler />
+			</div>
 		</div>
 	)
 }

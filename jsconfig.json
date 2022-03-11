@@ -3,13 +3,19 @@
         "baseUrl": ".",
         "paths": {
             "@/*": [
-                "C:/Users/Abdalla/Desktop/countries-browser/src/*"
+                "C:/Users/Abdalla/Desktop/country-browser/src/*"
             ],
             "@components/*": [
-                "C:/Users/Abdalla/Desktop/countries-browser/src/components/*"
+                "C:/Users/Abdalla/Desktop/country-browser/src/components/*"
             ],
             "@utils/*": [
-                "C:/Users/Abdalla/Desktop/countries-browser/src/utils/*"
+                "C:/Users/Abdalla/Desktop/country-browser/src/utils/*"
+            ],
+            "@contexts/*": [
+                "C:/Users/Abdalla/Desktop/country-browser/src/contexts/*"
+            ],
+            "@hooks/*": [
+                "C:/Users/Abdalla/Desktop/country-browser/src/hooks/*"
             ]
         }
     }
