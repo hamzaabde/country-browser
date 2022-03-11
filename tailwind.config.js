@@ -1,3 +1,7 @@
+const {
+	theme: { screens },
+} = require('tailwindcss/defaultConfig')
+
 module.exports = {
 	darkMode: 'class',
 	content: ['./src/**/*.jsx', './src/**/*.css'],
@@ -7,11 +11,8 @@ module.exports = {
 			bold: '600',
 			extraBold: '800',
 		},
+		screens: { xs: '375px', ...screens },
 		extend: {
-			screens: {
-				xs: '375px',
-				llg: '1440px',
-			},
 			fontFamily: { sans: ['Nunito Sans', 'Segoe UI', 'sans-serif'] },
 			fontSize: {
 				'home-items': '14px',
