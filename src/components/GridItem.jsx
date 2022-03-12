@@ -1,4 +1,4 @@
-import Detail from '@components/Detail'
+import Detail from '@components/GridItemDetail'
 
 export default function GridItem({ flags, name, ...details }) {
 	const { nativeName, capital, population, region } = details
@@ -6,7 +6,7 @@ export default function GridItem({ flags, name, ...details }) {
 
 	return (
 		<div className="rounded-lg mx-6 xs:max-w-[420px] sm:max-w-auto xs:mx-auto flex flex-col overflow-hidden items-stretch bg-white shadow-md">
-			<div className="">
+			<div>
 				<img
 					src={flags.svg}
 					alt={name}

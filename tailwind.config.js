@@ -1,6 +1,4 @@
-const {
-	theme: { screens },
-} = require('tailwindcss/defaultConfig')
+const { theme } = require('tailwindcss/defaultConfig')
 
 module.exports = {
 	darkMode: 'class',
@@ -11,7 +9,7 @@ module.exports = {
 			bold: '600',
 			extraBold: '800',
 		},
-		screens: { xs: '375px', ...screens },
+		screens: { xs: '375px', ...theme.screens },
 		extend: {
 			fontFamily: { sans: ['Nunito Sans', 'Segoe UI', 'sans-serif'] },
 			fontSize: {
