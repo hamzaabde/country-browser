@@ -13,8 +13,8 @@ function App() {
 		<Container>
 			<Header />
 			<Nav />
-			<GridContainer data={data} error={error} />
-			{/* <ItemPage data={data} error={error} /> */}
+			{/* <GridContainer data={data} error={error} /> */}
+			<ItemPage data={data} error={error} />
 		</Container>
 	)
 }

@@ -51,7 +51,7 @@ export default function useAllCountries() {
 function fetchAllCountries() {
 	return new Promise(async (resolve, reject) => {
 		const baseUrl =
-			'https://restcountries.com/v2/all?fields=name,nativeName,population,region,subRegion,capital,topLevelDomain,currencies,languages,borders,flags'
+			'https://restcountries.com/v2/all?fields=name,nativeName,population,region,subRegion,capital,topLevelDomain,currencies,languages,borders,flags,alpha3Code'
 
 		try {
 			const res = await fetch(baseUrl)
