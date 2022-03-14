@@ -11,8 +11,11 @@ function LoadingAnimation() {
 		<div className="flex flex-col items-center space-y-5">
 			<div className="animate-bounce">
 				<div className="rounded-full animate-spin w-20 h-20 gap-2 grid grid-cols-2 grid-rows-2 items-center content-center">
-					{'1111'.split('').map((_) => (
-						<div className="w-full h-full bg-blue-900 rounded-full"></div>
+					{'1234'.split('').map((_) => (
+						<div
+							key={_}
+							className="w-full h-full bg-blue-900 rounded-full"
+						></div>
 					))}
 				</div>
 			</div>
