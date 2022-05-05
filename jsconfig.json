@@ -1,14 +1,22 @@
 {
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["C:/Users/Abdalla/Desktop/country-browser/src/*"],
-			"@components/*": [
-				"C:/Users/Abdalla/Desktop/country-browser/src/components/*"
-			],
-			"@utils/*": ["C:/Users/Abdalla/Desktop/country-browser/src/utils/*"],
-			"@hooks/*": ["C:/Users/Abdalla/Desktop/country-browser/src/hooks/*"],
-			"@pages/*": ["C:/Users/Abdalla/Desktop/country-browser/src/pages/*"]
-		}
-	}
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "C:/Users/Abdalla/Desktop/country-browser/src/*"
+            ],
+            "@components/*": [
+                "C:/Users/Abdalla/Desktop/country-browser/src/components/*"
+            ],
+            "@utils/*": [
+                "C:/Users/Abdalla/Desktop/country-browser/src/utils/*"
+            ],
+            "@hooks/*": [
+                "C:/Users/Abdalla/Desktop/country-browser/src/hooks/*"
+            ],
+            "@pages/*": [
+                "C:/Users/Abdalla/Desktop/country-browser/src/pages/*"
+            ]
+        }
+    }
 }

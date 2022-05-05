@@ -1,29 +1,17 @@
-import { useReducer } from 'react'
-
 import Header from '@components/Header'
 import { Outlet } from 'react-router-dom'
 
-import { DataContext, dataReducer } from '@/data-context'
+import useTheme from '@hooks/useTheme'
 
-function Container() {
+export default function Container() {
+	const [isDark, setIsDark] = useTheme()
+
 	return (
-		<div
-			className={` min-h-screen bg-light-bg flex space-y-6 md:space-y-8 lg:space-y-12 flex-col items-stretch`}
-		>
-			<Header />
-			<Outlet />
+		<div className={isDark ? 'dark' : ''}>
+			<div className=" min-h-screen transition-all bg-light-bg dark:bg-dark-bg flex space-y-6 md:space-y-8 lg:space-y-12 flex-col items-stretch">
+				<Header theme={{ isDark, setIsDark }} />
+				<Outlet />
+			</div>
 		</div>
-	)
-}
-
-export default function () {
-	const [data, dispatch] = useReducer(dataReducer, [])
-
-	const value = { data, dispatch }
-
-	return (
-		<DataContext.Provider value={value}>
-			<Container />
-		</DataContext.Provider>
 	)
 }

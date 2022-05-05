@@ -32,7 +32,7 @@ export default function FilterMenu() {
 				setSelected(selected)
 			}}
 		>
-			<Listbox.Button className="flex focus:outline-[1px] focus:outline-dotted focus:outline-blue-400  items-center justify-between flex-nowrap bg-white shadow-md rounded-md xs:p-4 p-2 w-48 text-xs xs:text-sm text-light-input/70">
+			<Listbox.Button className="flex focus:outline-[1px] focus:outline-dotted focus:outline-blue-400  items-center justify-between flex-nowrap bg-white dark:bg-dark-blue shadow-md transition-all rounded-md xs:p-4 p-2 w-48 text-xs xs:text-sm text-light-input/70 dark:text-white/70">
 				{({ open }) => (
 					<>
 						<span className="">{selected.name}</span>
@@ -52,15 +52,15 @@ export default function FilterMenu() {
 				leaveFrom="transform scale-100 opacity-100"
 				leaveTo="transform scale-95 opacity-0"
 			>
-				<Listbox.Options className="outline-none focus-within:outline-[1px] focus-within:outline-dotted focus-within:outline-blue-400 absolute mt-2 top-full w-48 bg-white shadow-md rounded-md xs:p-2 p-1 items-start">
+				<Listbox.Options className="outline-none focus-within:outline-[1px] focus-within:outline-dotted focus-within:outline-blue-400 absolute mt-2 top-full w-48 bg-white dark:bg-dark-blue shadow-md rounded-md xs:p-2 p-1 items-start">
 					{options
 						.filter(({ id }) => id !== selected.id)
 						.map((person) => (
 							<Listbox.Option as={Fragment} key={person.id} value={person}>
 								{({ active }) => (
 									<button
-										className={`block w-full transition xs:px-2 text-left xs:py-1 px-1 py-0.5 cursor-pointer rounded-md hover:bg-black/5 text-xs  ${
-											active ? 'bg-black/5' : null
+										className={`block dark:text-white/70 w-full transition xs:px-2 text-left xs:py-1 px-1 py-0.5 cursor-pointer rounded-md dark:hover:bg-dark-bg/60 hover:bg-black/5 text-xs  ${
+											active ? 'bg-black/5 dark:bg-dark-bg/60' : null
 										}`}
 									>
 										{person.name}

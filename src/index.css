@@ -18,20 +18,4 @@
 		font-weight: 300;
 		src: url('/fonts/Nunito-Light.ttf') format('ttf');
 	}
-
-	.button-shadow {
-		box-shadow: 0 0 0.3rem theme('colors.slate.300');
-	}
-
-	.no-button-shadow {
-		box-shadow: 0 0 0.2rem theme('colors.slate.300');
-	}
-
-	.button-shadow-sm {
-		box-shadow: 0 0 0.2rem theme('colors.slate.300');
-	}
-
-	.no-button-shadow-sm {
-		box-shadow: 0 0 0.1rem theme('colors.slate.300');
-	}
 }

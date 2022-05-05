@@ -8,19 +8,19 @@ export default function Loading() {
 
 function LoadingAnimation() {
 	return (
-		<div className="flex flex-col items-center space-y-5">
+		<div className="flex flex-col items-center space-y-3">
 			<div className="animate-bounce">
-				<div className="rounded-full animate-spin w-20 h-20 gap-2 grid grid-cols-2 grid-rows-2 items-center content-center">
+				<div className="rounded-full animate-spin w-10 h-10 gap-1 grid grid-cols-2 grid-rows-2 items-center content-center">
 					{'1234'.split('').map((_) => (
 						<div
 							key={_}
-							className="w-full h-full bg-blue-900 rounded-full"
+							className="w-full h-full transition bg-emerald-500 rounded-full"
 						></div>
 					))}
 				</div>
 			</div>
 
-			<strong className="text-xl text-light-text font-extraBold tracking-widest">
+			<strong className="text-lg transition text-light-text dark:text-white font-extraBold tracking-widest">
 				Loading...
 			</strong>
 		</div>
