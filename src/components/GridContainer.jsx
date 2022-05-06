@@ -1,3 +1,5 @@
+import FilterContext from '@/filter-context'
+
 import GridItem from '@components/GridItem'
 import Loading from '@components/Loading'
 import ErrorDialog from '@components/ErrorDialog'
@@ -8,8 +10,8 @@ export default function GridContainer() {
 	const countries = useCountries()
 
 	return (
-		<div className="max-w-screen-xl flex self-center w-full pb-24">
-			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 grow mx-4 sm:mx-6 md:mx-8">
+		<div className="flex self-center w-full max-w-screen-xl pb-24">
+			<div className="grid grid-cols-1 gap-10 mx-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grow sm:mx-6 md:mx-8">
 				<Grid {...countries} />
 			</div>
 		</div>
@@ -22,10 +24,20 @@ function Grid({ data, error, isLoading }) {
 	if (isLoading) return <Loading />
 
 	return (
-		<>
-			{data.map((country, i) => (
-				<GridItem key={i} {...country} />
-			))}
-		</>
+		<FilterContext.Consumer>
+			{({ type }) => (
+				<>
+					{data
+						.filter(({ region }) => {
+							if (type === 'all') return true
+
+							return region.toLowerCase() === type
+						})
+						.map((country, i) => (
+							<GridItem key={i} {...country} />
+						))}
+				</>
+			)}
+		</FilterContext.Consumer>
 	)
 }

@@ -9,13 +9,17 @@ const queryClient = new QueryClient()
 
 import { BrowserRouter as Router } from 'react-router-dom'
 
+import FilterContextProvider from '@components/FilterContextProvider'
+
 ReactDOM.render(
 	<React.StrictMode>
-		<QueryClientProvider client={queryClient}>
-			<Router>
-				<App />
-			</Router>
-		</QueryClientProvider>
+		<FilterContextProvider>
+			<QueryClientProvider client={queryClient}>
+				<Router>
+					<App />
+				</Router>
+			</QueryClientProvider>
+		</FilterContextProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
 )
