@@ -1,17 +1,16 @@
-import { useState, useCallback } from 'react'
+import { useState } from 'react'
 import { SearchIcon } from '@heroicons/react/solid'
 
-import { useQueryClient } from 'react-query'
+import { useNavigate } from 'react-router-dom'
 
 export default function SearchBar() {
 	const [query, setQuery] = useState('')
-
-	const queryClient = useQueryClient()
+	const navigate = useNavigate()
 
 	const onSubmit = (e) => {
 		e.preventDefault()
 
-		queryClient.setQueryData('countries', [])
+		navigate(`/search/${query}`)
 	}
 
 	return (
